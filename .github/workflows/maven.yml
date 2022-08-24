@@ -32,8 +32,8 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: xolisamatika/products-api
-        tags: v1, latest
-        registry: docker.io
+        tags: latest
+        registry: registry.docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
