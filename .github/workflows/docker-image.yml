@@ -14,5 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag products-api:$(date +%s)
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin' # See 'Supported distributions' for available options
+        java-version: '17'
+        cache: maven
+    - name: Build with maven
+    - run: mvn clean install
+#     - name: Build the Docker image
+#       run: docker build . --file Dockerfile --tag products-api:$(date +%s)
