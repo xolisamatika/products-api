@@ -33,7 +33,7 @@ jobs:
       with:
         image: xolisamatika/products-api
         tags: latest
-        registry: registry.docker.io
+        registry: hub.docker.com
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
