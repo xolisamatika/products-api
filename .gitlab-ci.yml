@@ -9,7 +9,7 @@ variables:
 stages:
   - build
   - package
-#  - deploy
+  - deploy
 
 maven-build:
   image: maven:3.8-amazoncorretto-18
